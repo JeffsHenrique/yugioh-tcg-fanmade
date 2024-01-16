@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icons/favicon.ico">
+    <link rel="stylesheet" href="./css/cardSearchStyle.css">
+    <title>Yu-Gi-Oh!</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/cardSearch.html">Card Search</a>
+            <a href="">Create Your Deck</a>
+            <a href="">Duel</a>
+        </nav>
+    </header>
+
+    <br />
+
+    <div class="card-search">
+        <h1>Card Generator</h1>
+
+        <div class="search-or-random">
+            <form class="search">
+                <input type="search" id="searchInput" placeholder="Ex: Dark Magician">
+                <button>Search</button>
+            </form>
+            <p>or</p>
+            <button id="random-card">Random</button>
+            <div class="warning"></div>
+        </div>
+    </div>
+
+
+    <div class="body">
+        <div class="card-name">--</div>
+        <div class="card-data">
+            <div class="card-image">
+                
+                <img src="./img/card-back.png" alt="Card" width="246" height="359">
+            </div>
+            <div class="card-details">
+                <div class="card-attribute">Attribute: <span>--</span> </div>
+                <div class="card-level">Level: <span>--</span> </div>
+                <div class="card-atk">ATK: <span>--</span></div>
+                <div class="card-def">DEF: <span>--</span></div>
+                <div class="type-monster">
+                    <div class="card-race">Race: <span>--</span></div>
+                    <div class="card-type">Type: <span>--</span></div>
+                </div>
+                <div class="card-desc">Description: <span>--</span></div>
+                <div class="card-more-images"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>Developed by Jeff</footer>
+
+    <script src="./js/cardSearch.js"></script>
+</body>
+</html>
