@@ -21,6 +21,7 @@ document.querySelector('.search').addEventListener('submit', async (e) => {
                 level: json.data[0].level,
                 atk: json.data[0].atk,
                 def: json.data[0].def,
+                sets: json.data[0].card_sets[0].set_code,
                 race: json.data[0].race,
                 type: json.data[0].type,
                 desc: json.data[0].desc,
@@ -75,6 +76,7 @@ document.querySelector('#random-card').addEventListener('click', async () => {
             document.querySelector('.card-level span').innerHTML = `${json.level}`
             document.querySelector('.card-atk span').innerHTML = `${json.atk}`
             document.querySelector('.card-def span').innerHTML = `${json.def}`
+            document.querySelector('.card-sets span').innerHTML = `${json.card_sets[0].set_code}`
             document.querySelector('.card-race span').innerHTML = `${json.race}`
             document.querySelector('.card-type span').innerHTML = `${json.type}`
             document.querySelector('.card-desc span').innerHTML = `${json.desc}`
@@ -84,6 +86,8 @@ document.querySelector('#random-card').addEventListener('click', async () => {
             document.querySelector('.card-name').innerHTML = `${json.name}`
 
             document.querySelector('.card-image img').setAttribute('src', json.card_images[0].image_url)
+
+            document.querySelector('.card-sets span').innerHTML = `${json.card_sets[0].set_code}`
 
             document.querySelector('.card-type span').innerHTML = `${json.type}`
             document.querySelector('.card-race span').innerHTML = `${json.race}`
@@ -135,6 +139,7 @@ function showCardInfo(json) {
         document.querySelector('.card-level span').innerHTML = `${json.level}`
         document.querySelector('.card-atk span').innerHTML = `${json.atk}`
         document.querySelector('.card-def span').innerHTML = `${json.def}`
+        document.querySelector('.card-sets span').innerHTML = `${json.sets}`
         document.querySelector('.card-race span').innerHTML = `${json.race}`
         document.querySelector('.card-type span').innerHTML = `${json.type}`
         document.querySelector('.card-desc span').innerHTML = `${json.desc}`
@@ -163,6 +168,7 @@ function clearInfo() {
     document.querySelector('.card-level span').innerHTML = '--'
     document.querySelector('.card-atk span').innerHTML = '--'
     document.querySelector('.card-def span').innerHTML = '--'
+    document.querySelector('.card-sets span').innerHTML = '--'
     document.querySelector('.card-race span').innerHTML = '--'
     document.querySelector('.card-type span').innerHTML = '--'
     document.querySelector('.card-desc span').innerHTML = '--'
